@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>OpenionEnded</title>
+  </head>
+  <body>
+   <h1>OpenionEnded</h1>
+
+   <form  method="post">
+     <label>
+       <div>Title</div>
+       <input type="text" name="title" value="{{title}}">
+     </label>
+
+     <label>
+       <div>Elaboration</div>
+       <textarea name="elaboration">{{elaboration}}</textarea>
+     </label>
+
+     <div class="error">{{error}}</div>
+
+     <input type="submit">
+   </form>
+
+  </body>
+ </html>
+{% endblock %}

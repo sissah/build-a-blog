@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+
+   <h1>OpenionEnded</h1>
+   <!--Need to install a way so when button is click it will redirect
+    to new post page-->
+    <form>
+      <input type="submit" formaction="/blog/newpost" value="Post your own opinion!">
+    </form>
+   <hr>
+
+   {% for opinion in opinions %}
+    <div class="opinion">
+      <a href="/blog/{{opinion.key().id()}}">
+      <div class="opinion-title">{{opinion.title}}</div>
+      </a>
+      <pre class="opinion-body">{{opinion.elaboration}}</pre>
+    </div>
+   {% endfor %}
+{% endblock %}
